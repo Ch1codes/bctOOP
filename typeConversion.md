@@ -1,4 +1,4 @@
-###### Write a program to convert usd into npr and vice versa using constructor as well as casting operator
+Write a program to convert usd into npr and vice versa using constructor as well as casting operator
 ```cpp
 #include <iostream>
 
@@ -85,7 +85,7 @@ return 0;
 }
 ```
 
-###### Write a program to convert between tola and gram
+Write a program to convert between tola and gram
 ```cpp
 #include<iostream>
 
@@ -149,3 +149,230 @@ return 0;
 
 }
 ```
+
+Write a program to convert polar coordinates to cartesian
+```cpp
+#include<iostream>
+#include<math.h>
+using namespace std;
+double toRadian = M_PI/180;
+class rectangle{
+private:
+float x;
+float y;
+public:
+rectangle (float a=0, float b=0):x(a), y(b){
+}
+void display(){
+    cout<<"x: "<<x<<" y: "<<y<<endl;
+}
+};
+class polar{
+private:
+float r;
+float a;
+public:
+polar() {
+    cout<<"enter radial value and angle in degrees"<<endl;
+    cin>>r>>a;
+    a=a*toRadian;
+}
+operator rectangle (){
+return rectangle(r*cos(a), r*sin(a));
+}
+};
+int main() {
+    polar m;
+    rectangle n;
+    n=m;
+    n.display();
+    return 0;
+}
+```
+
+Write a program to convert Cartesian coordinates to polar. 
+```cpp
+#include<iostream>
+
+#include<math.h>
+
+using namespace std;
+
+float toDegrees=180/M_PI;
+
+class Polar{
+
+private:
+
+float r;
+
+float a;
+
+public:
+
+Polar(float c=0, float b=0):r(c), a(b){}
+
+void display(){
+
+cout<<"r: "<<r<<" angle in degrees: "<<a*toDegrees<<endl;
+
+}
+
+};
+
+class Rectangle{
+
+private:
+
+float x;
+
+float y;
+
+public:
+
+Rectangle(){
+
+cout<<"enter the x and y coordinates"<<endl;
+
+cin>>x>>y;
+
+}
+
+operator Polar(){
+
+double rho= sqrt(pow(x, 2)+pow(y,2));
+
+double ang= atan(y/x);
+
+return Polar(rho, ang);
+
+}
+
+};
+
+int main(){
+
+Polar m;
+
+Rectangle n;
+
+m=n;
+
+m.display();
+
+return 0;
+
+}
+```
+
+Basic to User Defined: promotion, uses constructor placed at destination
+```cpp
+#include<iostream>
+
+using namespace std;
+
+class num{
+
+private:
+
+int n;
+
+public:
+
+num(int x=0){
+
+n=x;
+
+}
+
+void display(){
+
+cout<<n<<endl;
+
+}
+
+};
+
+int main(){
+
+int a=10;
+
+num b;
+
+b=a;
+
+b.display();
+
+return 0;
+
+}
+```
+
+User Defined to Basic: uses casting operator, placed at destination
+```cpp
+#include<iostream>
+
+using namespace std;
+
+class num{
+
+private:
+
+int n;
+
+public:
+
+num(int x=0){
+
+n=x;
+
+}
+
+operator int(){
+
+return n;
+
+}
+
+};
+
+int main(){
+
+int a;
+
+num b=10;
+
+a=b;
+
+cout<<a<<endl;
+
+return 0;
+
+}
+```
+
+explicit conversion
+```cpp
+#include<iostream>
+
+using namespace std;
+
+int main(){
+
+float fvalue=1.12;
+
+int ivalue;
+
+ivalue=static_cast<int>(fvalue);
+
+cout<<fvalue<<endl;
+
+cout<<ivalue<<endl;
+
+return 0;
+
+}
+
+//destructive conversion when converting from higher to lower data type
+```
+

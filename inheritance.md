@@ -1,7 +1,6 @@
-###### Write a program which contains a base class that ask the user to enter complex number and make a derived class that add the complex no. of its own with the base. Finally make a third class that is friend with the derived and calculate the difference between the base complex no. and its own complex no. 
+ Write a program which contains a base class that ask the user to enter complex number and make a derived class that add the complex no. of its own with the base. Finally make a third class that is friend with the derived and calculate the difference between the base complex no. and its own complex no. 
 ```c++
 #include<iostream>
-
 using namespace std;
 
 class C;
@@ -89,7 +88,7 @@ return 0;
 }
 ```
  
-###### Write a program to create a derived class by inheriting two base classes with same function name. Your program should be complete and meaningful
+Write a program to create a derived class by inheriting two base classes with same function name. Your program should be complete and meaningful
  This program depicts the ambiguity problem.
  ```cpp
  #include<iostream>
@@ -165,7 +164,7 @@ return 0;
 }
 ```
 
-###### Write a program to illustrate the constructor and destructor invocation in multilevel inheritance. 
+Write a program to illustrate the constructor and destructor invocation in multilevel inheritance. 
 ```cpp
 #include<iostream>
 
@@ -237,7 +236,7 @@ In this program, we see that constructors are called in the order of top to bott
 
 
 
-###### Write a program to show hybrid Inheritance and solution to diamond problem.
+Write a program to show hybrid Inheritance and solution to diamond problem.
 ```cpp
 #include<iostream>
 
@@ -317,7 +316,7 @@ return 0;
 ```
 
 
-###### Write a program to show multilevel inheritance.
+Write a program to show multilevel inheritance.
 ```cpp
 #include<iostream>
 
@@ -395,7 +394,8 @@ return 0;
 
 }
 ```
-###### Write a program to show hierarchical inheritance. 
+
+Write a program to show hierarchical inheritance. 
 ```cpp
 #include<iostream>
 
@@ -541,3 +541,6 @@ return 0;
 
 }
 ```
+
+Visibility mode always should be Protected.  Protected made solely for inheritance. 
+Can't inherit static, friend and constructor. But constructor called because base should be satisfied 

@@ -1,4 +1,4 @@
-###### Write a program to show how inline function is used. 
+ Write a program to show how inline function is used. 
 ```cpp
 /*The compiler is most likely to not consider the inlining of a function under certain circumstances that are mentioned here as follows-
 
@@ -387,3 +387,182 @@ return 0;
 
 }
 ```
+
+##### Write a program to swap two numbers using the concept of pass by reference.
+```cpp
+#include<iostream>
+
+using namespace std;
+
+void swap(int& a, int &b){
+
+int c;
+
+c=a;
+
+a=b;
+
+b=c;
+
+}
+
+int main(){
+
+int x=10;
+
+int y= 5;
+
+cout<<"before swapping:"<<endl;
+
+cout<<"x: "<<x<<" y: "<<y<<endl;
+
+swap(x, y);
+
+cout<<"after swapping:"<<endl;
+
+cout<<"x: "<<x<<" y: "<<y<<endl;
+
+return 0;
+
+}
+```
+
+##### Write a program to show return by reference.
+```cpp
+#include<iostream>
+
+using namespace std;
+
+int& check(int& a, int& b){
+
+if (a>=b){
+
+return a;
+
+}
+
+else {
+
+return b;
+
+}
+
+}
+
+int main() {
+
+int a=10;
+
+int b=5;
+
+cout<<"Before: "<<" a: "<<a<<" b: "<<b<<endl;
+
+check(a, b)=15;
+
+cout<<"After: "<<" a: "<<a<<" b: "<<b<<endl;
+
+return 0;
+
+}
+```
+
+##### Write a program to illustrate the working of pointer to a object.
+```cpp
+#include<iostream>
+
+using namespace std;
+
+class num{
+
+private:
+
+int n;
+
+public:
+
+num(int x):n(x){}
+
+void display(){
+
+cout<<n<<endl;
+
+}
+
+};
+
+int main(){
+
+num a(10);
+
+num *b;
+
+b=&a;
+
+a.display();
+
+b->display();
+
+return 0;
+
+}
+```
+
+##### Write a program to show the use of static data members, static function, constant member function.
+```cpp
+#include<iostream>
+
+using namespace std;
+
+class num{
+
+private:
+
+int n;
+
+public:
+
+static int count;
+
+num(int x=0):n(x){
+
+count++;
+
+}
+
+static void getCount(){
+
+cout<<count<<endl;
+
+}
+
+void const display(){
+
+cout<<n<<endl;
+
+}
+
+};
+
+int num::count=0;
+
+int main(){
+
+num a(3), b, c(10);
+
+cout<<"no. of objects: "<<num::count;
+
+a.display();
+
+b.display();
+
+c.display();
+
+num::getCount();
+
+return 0;
+
+}
+//needs fixing
+```
+
+Member function of one class cannot be made friend of another other. Containership and friend class is an option. 
