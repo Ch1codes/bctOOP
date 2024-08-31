@@ -7,7 +7,7 @@ BCT third semester OOP questions and solutions
 4. [Inheritance in OOP](inheritance.md)
 5. [Classes and object](ClassAndObjects.md)
 6. [Arrays and Strings](ArraysAndStrings.md)
-7. [Exception handling](ExceptionHandling.md)
+7. [Exception handling](Exceptionhandling.md)
 8. [Filehandling](Filehandling.md)
 9. [Polymorphism](Polymorphism.md)
 10. [Templates](Templates.md)
